@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>RHS Mock Markets (Fake Money)</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Ridgefield High Mock Markets</h1>
+      <p class="banner">
+        ⚠️ This is a school demo using <strong>fake money only</strong>. Not real betting,
+        not gambling, no cash payouts.
+      </p>
+    </header>
+
+    <main class="grid">
+      <section class="card" id="account-card">
+        <h2>Create Account</h2>
+        <form id="account-form">
+          <label>
+            Display name
+            <input id="name" required maxlength="30" placeholder="e.g. Alex" />
+          </label>
+          <label>
+            Starting fake balance
+            <input id="starting-balance" type="number" min="1" step="1" value="1000" required />
+          </label>
+          <button type="submit">Create account</button>
+        </form>
+
+        <div id="account-list"></div>
+      </section>
+
+      <section class="card" id="market-card">
+        <h2>Create Bet / Market</h2>
+        <form id="market-form">
+          <label>
+            Question
+            <input
+              id="question"
+              required
+              maxlength="120"
+              placeholder="Will RHS football win next Friday?"
+            />
+          </label>
+          <label>
+            Category
+            <input id="category" maxlength="40" placeholder="Sports, Clubs, Academics..." />
+          </label>
+          <label>
+            Expiry date
+            <input id="expiry" type="date" required />
+          </label>
+          <button type="submit">Create market</button>
+        </form>
+      </section>
+
+      <section class="card wide" id="trade-card">
+        <h2>Place Fake-Money Trades</h2>
+        <p>
+          Buy YES shares if you think the event will happen. Buy NO shares otherwise. Each share
+          costs 1 fake dollar in this demo.
+        </p>
+        <div id="markets"></div>
+      </section>
+
+      <section class="card wide" id="ledger-card">
+        <h2>Activity Log</h2>
+        <ul id="ledger"></ul>
+      </section>
+    </main>
+
+    <footer>
+      <small>
+        Ridgefield High demo app • Educational simulation only • <strong>FAKE MONEY</strong>
+      </small>
+    </footer>
+
+    <script src="app.js"></script>
+  </body>
+</html>
